@@ -49,7 +49,7 @@
 
                         </fieldset>
                     </form>
-                <center><b>Not registered ?</b> <br></b><a href="<?php echo base_url('User/register'); ?>">Register here</a></center><!--for centered text-->
+                <center><b><?php echo $p_not_registered ?></b> <br></b><a href="<?php echo base_url('User/register'); ?>"> <?php echo $p_register ?></a></center><!--for centered text-->
 
                 </div>
             </div>

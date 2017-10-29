@@ -33,9 +33,8 @@ a:hover
 <body>
 <!-- Beginning header -->
     <div>
-        <li><a href="<?= base_url('Siteadmin/users') ?>">Update Users</a></li>
-        <li><a href="<?= base_url('Siteadmin/copy') ?>">Update Copy</a></li>
-        
+        <a href='<?php echo site_url('Site_admin/user')?>'>Users</a> | 
+        <a href='<?php echo site_url('Site_admin/param')?>'>Parameters</a> |
     </div>
 <!-- End of header-->
     <div style='height:20px;'></div>  

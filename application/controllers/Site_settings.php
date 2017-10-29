@@ -19,9 +19,7 @@ function __construct()
 $copy = array();
 //compiling all copy as parameters with name of $ and "parameter" field
 
-/* ------------------ */    
- 
-//$this->load->library('Grocery_CRUD');    
+
 }
  
 function _admin_output($output = null,$a = null)
@@ -72,9 +70,6 @@ public function copy()
             $output = array();
             if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true && ($_SESSION['is_admin'] === TRUE)) {
                 echo "logged in";
-                        $crud = new Grocery_CRUD();
-                        $crud->set_table('parameters');
-                        $output = $crud->render(); 
                         
 
             } else {

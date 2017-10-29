@@ -52,7 +52,7 @@
 
                           </fieldset>
                       </form>
-                      <center><b>Already registered ?</b> <br></b><a href="<?php echo base_url('user/login_view'); ?>">Login here</a></center><!--for centered text-->
+                      <center><b>Already registered ?</b> <br></b><a href="<?php echo base_url('user/login_view'); ?>"><?php echo $p_login; ?></a></center><!--for centered text-->
                   </div>
               </div>
           </div>
