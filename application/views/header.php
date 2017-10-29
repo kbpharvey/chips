@@ -52,17 +52,33 @@
 				</div>
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right col-md-2">
-						<?php if (isset($_SESSION['username']) && $_SESSION['logged_in'] === true) : ?>
-							<li>Logged in as <?= ($_SESSION['username']) ?>  <a href="<?= base_url('logout') ?>">Logout</a></li>
-						<?php else : ?>
-							<li><a href="<?= base_url('register') ?>">
-                                                                <?php  echo $p_register?>
-                                                            </a></li>
-							<li><a href="<?= base_url('login') ?>">
-                                                               <?php  echo $p_login?> 
-                                                            </a></li>
-						<?php endif; ?>
-					</ul>
+                                            
+                                            <?php
+//                                            echo "admin in header is" . $is_admin;
+                                                switch ($is_admin)
+                                                {
+                                                    case 0:
+							echo "<li>Logged in as " . $user_name . "<a href=" . base_url('/User/user_logout') . ">" . $p_logout . "</a></li>";
+                                                        break;
+                                                    case 1:
+							echo "<li>Logged in as " . $user_name . "<a href=" . base_url('/User/user_logout') . ">" . $p_logout . "</a></li>";
+                                                        break;
+                                                    case 2:
+                                                        echo "<li><a href=" . base_url('/User/') . ">" . $p_login_header . "</a></li>";
+                                                        echo "<li><a href=" . base_url('/User/register/') . ">" . $p_register . "</a></li>";
+                                                        break;
+                                                    case 3:
+                                                        echo "<li><a href=" . base_url('/User/user_logout') . ">" . $p_login_header . "</a></li>";
+                                                        break;
+                                                    default:
+                                                        echo "<li><a href=" . base_url('/User/') . ">" . $p_login_header . "</a></li>";
+                                                        echo "<li><a href=" . base_url('/User/register/') . ">" . $p_register . "</a></li>";                                                        
+                                                        exit(1); // EXIT_ERROR
+                                                } 
+                                            
+                                            
+                                            ?>
+ 					</ul>
 				</div><!-- .navbar-collapse -->
 			</div><!-- .container-fluid -->
 		</nav><!-- .navbar -->

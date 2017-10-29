@@ -17,11 +17,6 @@ function __construct()
 /* Standard Libraries */
 
 $copy = array();
-
-
-//$this->load->model('System_model');
-//		$this->load->model('user_model');
-
 //compiling all copy as parameters with name of $ and "parameter" field
 
 /* ------------------ */    
@@ -97,7 +92,7 @@ public function copy()
 public function index()
 {
         {
-                echo '<pre>'; print_r($this->session->userdata); echo '</pre>';   	
+//                echo '<pre>'; print_r($this->session->userdata); echo '</pre>';   	
             $output = array();
             if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true && ($_SESSION['is_admin'] == 1)) {
                         $crud = new Grocery_CRUD();

@@ -74,7 +74,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<p>Welcome to Milta</p>
                 <p>You are looking at the guest page</p>
 	</div>
-
         
   <div class="row">
     <div class="col-md-4">

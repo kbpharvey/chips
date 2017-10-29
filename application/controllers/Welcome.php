@@ -1,17 +1,14 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 class Welcome extends CI_Controller {
-public function __construct(){
+public function __construct()
+        {
         parent::__construct();
         $this->load->library('session');
         $data= array();
-
         }
 
-
-
-
-	/**
+        /**
 	 * Index Page for this controller.
 	 *
 	 * Maps to the following URL
@@ -26,30 +23,35 @@ public function __construct(){
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function index()
-	{
+    public function index()
+    {
         $data= array();
         $data=$this->Site_settings_model->admin_check($data);
-         switch ($data['is_admin'])
+        $data=$this->Site_settings_model->parameters_compile($data,'COPY');
+
+        $this->load->view("header.php",$data);
+        switch ($data['is_admin'])
             {
                 case 0:
-                    $this->load->view('welcome_message');
+                    $this->load->view('welcome_message',$data);
                 break;
                 case 1:
-                     $this->load->view('/logged_in/welcome_message');
+                     $this->load->view('/logged_in/welcome_message',$data);
                 break;
                 case 2:
-                    echo "not logged in";
+//                    echo "not logged in";
                          redirect('/user/login_view/', 'refresh');
                 break;
                 case 3:
+//                    echo "showing suspended";
                     $this->load->view('/errors/account_suspended');
                     break;
                 default:
-                    echo "not logged in";
+//                    echo "not logged in";
                          redirect('/user/user_logout/', 'refresh');
                     exit(1); // EXIT_ERROR
             }    
-        }        
+        $this->load->view("footer.php",$data);
+    }        
             
 }

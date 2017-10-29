@@ -14,6 +14,7 @@ public function admin_check($data)
             if(array_key_exists('user_email', $_SESSION))
                 {
                 $email = $_SESSION['user_email'];
+                $data['user_name'] = $_SESSION['user_name'];
                 }
             else
                 {
@@ -52,8 +53,9 @@ public function admin_check($data)
                     }
                     else
                     {
-                       //not active
-                       $data['is_admin']=3;
+                       //suspended - not active
+
+                        $data['is_admin']=3;
                     }
             }
             else
