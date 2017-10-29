@@ -68,46 +68,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 
 <div id="container">
-	<h1>Welcome to CodeIgniter!</h1>
+	<h1>Oh dear - apologies</h1>
 
 	<div id="body">
-		<p>Welcome to Milta</p>
-                <p>You are looking at the guest page</p>
-	</div>
-
-        
-  <div class="row">
-    <div class="col-md-4">
-
-      <table class="table table-bordered table-striped">
+		<p>We are sorry about this!!</p>
+                <p>But your account is currently suspended</p>
+                <p>Please speak to the milta chief to gain access our site</p>
+                <p><a href="<?php echo base_url('user/register');?>" >  <button type="button" class="btn-primary">Register</button></a></p>
+                <p><a href="<?php echo base_url('user/user_logout');?>" >  <button type="button" class="btn-primary">Login</button></a></p>
+        </div>
 
 
-        <tr>
-          <th colspan="2"><h4 class="text-center">User Info</h3></th>
-
-        </tr>
-          <tr>
-            <td>User Name</td>
-            <td><?php echo $this->session->userdata('user_name'); ?></td>
-          </tr>
-          <tr>
-            <td>User Email</td>
-            <td><?php echo $this->session->userdata('user_email');  ?></td>
-          </tr>
-          <tr>
-            <td>User Age</td>
-            <td><?php echo $this->session->userdata('user_age');  ?></td>
-          </tr>
-          <tr>
-            <td>User Mobile</td>
-            <td><?php echo $this->session->userdata('user_mobile');  ?></td>
-          </tr>
-      </table>
-
-
-    </div>
-  </div>
-<a href="<?php echo base_url('user/user_logout');?>" >  <button type="button" class="btn-primary">Logout</button></a>
 
         
         

@@ -43,11 +43,11 @@ public function __construct(){
                          redirect('/user/login_view/', 'refresh');
                 break;
                 case 3:
-                echo "logged in but suspended";
-                break;
+                    $this->load->view('/errors/account_suspended');
+                    break;
                 default:
                     echo "not logged in";
-                         redirect('/user/login_view/', 'refresh');
+                         redirect('/user/user_logout/', 'refresh');
                     exit(1); // EXIT_ERROR
             }    
         }        

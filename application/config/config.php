@@ -32,8 +32,8 @@ switch (ENVIRONMENT)
 	case 'testing':
             $config['base_url']	= 'http://localhost:8080/chips/';
         case 'production':
-//            $config['base_url']	= 'http://chips.totalh.net/';
-              $config['base_url']	= 'http://chips.byethost4.com/';
+            $config['base_url']	= 'http://chips.totalh.net/';
+//              $config['base_url']	= 'http://chips.byethost4.com/';
         break;
 
 	default:

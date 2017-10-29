@@ -25,7 +25,6 @@ public function admin_check($data)
             
             if($email)
             {
-echo "email present";
                 //logged in checking if active
                 $this->db->select('*');
                 $this->db->from('user');

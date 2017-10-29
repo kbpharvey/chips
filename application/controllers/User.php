@@ -15,6 +15,10 @@ public function index()
 {
     $this->login_view();
 }
+public function register()
+        {
+        $this->load->view("register.php");
+        }
 
 public function register_user(){
 
@@ -85,7 +89,7 @@ function login_user(){
         $this->session->set_userdata('user_age',$data['user_age']);
         $this->session->set_userdata('user_mobile',$data['user_mobile']);
 
-$this->load->view('user_profile.php');
+                    redirect('/Welcome', 'refresh');
 
       }
       else{
@@ -97,11 +101,6 @@ $this->load->view('user_profile.php');
 
 }
 
-function user_profile(){
-
-$this->load->view('user_profile.php');
-
-}
 public function user_logout(){
 
   $this->session->sess_destroy();
