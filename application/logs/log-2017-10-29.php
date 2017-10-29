@@ -1681,3 +1681,109 @@ DEBUG - 2017-10-29 07:32:22 --> Session class already loaded. Second attempt ign
 INFO - 2017-10-29 07:32:22 --> File loaded: C:\wamp64\www\chips\application\views\register.php
 INFO - 2017-10-29 07:32:22 --> Final output sent to browser
 DEBUG - 2017-10-29 07:32:22 --> Total execution time: 0.2802
+INFO - 2017-10-29 07:36:06 --> Config Class Initialized
+INFO - 2017-10-29 07:36:06 --> Hooks Class Initialized
+DEBUG - 2017-10-29 07:36:06 --> UTF-8 Support Enabled
+INFO - 2017-10-29 07:36:06 --> Utf8 Class Initialized
+INFO - 2017-10-29 07:36:06 --> URI Class Initialized
+INFO - 2017-10-29 07:36:06 --> Router Class Initialized
+INFO - 2017-10-29 07:36:06 --> Output Class Initialized
+INFO - 2017-10-29 07:36:06 --> Security Class Initialized
+DEBUG - 2017-10-29 07:36:06 --> Global POST, GET and COOKIE data sanitized
+INFO - 2017-10-29 07:36:06 --> Input Class Initialized
+INFO - 2017-10-29 07:36:06 --> Language Class Initialized
+INFO - 2017-10-29 07:36:06 --> Loader Class Initialized
+INFO - 2017-10-29 07:36:06 --> Helper loaded: url_helper
+INFO - 2017-10-29 07:36:06 --> Helper loaded: file_helper
+INFO - 2017-10-29 07:36:06 --> Database Driver Class Initialized
+INFO - 2017-10-29 07:36:06 --> Session: Class initialized using 'files' driver.
+INFO - 2017-10-29 07:36:06 --> Model Class Initialized
+INFO - 2017-10-29 07:36:06 --> Controller Class Initialized
+DEBUG - 2017-10-29 07:36:06 --> Session class already loaded. Second attempt ignored.
+INFO - 2017-10-29 07:36:06 --> Config Class Initialized
+INFO - 2017-10-29 07:36:06 --> Hooks Class Initialized
+DEBUG - 2017-10-29 07:36:06 --> UTF-8 Support Enabled
+INFO - 2017-10-29 07:36:06 --> Utf8 Class Initialized
+INFO - 2017-10-29 07:36:06 --> URI Class Initialized
+INFO - 2017-10-29 07:36:06 --> Router Class Initialized
+INFO - 2017-10-29 07:36:06 --> Output Class Initialized
+INFO - 2017-10-29 07:36:06 --> Security Class Initialized
+DEBUG - 2017-10-29 07:36:06 --> Global POST, GET and COOKIE data sanitized
+INFO - 2017-10-29 07:36:06 --> Input Class Initialized
+INFO - 2017-10-29 07:36:06 --> Language Class Initialized
+INFO - 2017-10-29 07:36:06 --> Loader Class Initialized
+INFO - 2017-10-29 07:36:06 --> Helper loaded: url_helper
+INFO - 2017-10-29 07:36:06 --> Helper loaded: file_helper
+INFO - 2017-10-29 07:36:06 --> Database Driver Class Initialized
+INFO - 2017-10-29 07:36:06 --> Session: Class initialized using 'files' driver.
+INFO - 2017-10-29 07:36:06 --> Model Class Initialized
+INFO - 2017-10-29 07:36:06 --> Controller Class Initialized
+DEBUG - 2017-10-29 07:36:06 --> Session class already loaded. Second attempt ignored.
+INFO - 2017-10-29 07:36:06 --> File loaded: C:\wamp64\www\chips\application\views\login.php
+INFO - 2017-10-29 07:36:06 --> Final output sent to browser
+DEBUG - 2017-10-29 07:36:06 --> Total execution time: 0.2521
+INFO - 2017-10-29 07:36:18 --> Config Class Initialized
+INFO - 2017-10-29 07:36:18 --> Hooks Class Initialized
+DEBUG - 2017-10-29 07:36:18 --> UTF-8 Support Enabled
+INFO - 2017-10-29 07:36:18 --> Utf8 Class Initialized
+INFO - 2017-10-29 07:36:18 --> URI Class Initialized
+INFO - 2017-10-29 07:36:18 --> Router Class Initialized
+INFO - 2017-10-29 07:36:18 --> Output Class Initialized
+INFO - 2017-10-29 07:36:18 --> Security Class Initialized
+DEBUG - 2017-10-29 07:36:18 --> Global POST, GET and COOKIE data sanitized
+INFO - 2017-10-29 07:36:18 --> Input Class Initialized
+INFO - 2017-10-29 07:36:18 --> Language Class Initialized
+INFO - 2017-10-29 07:36:18 --> Loader Class Initialized
+INFO - 2017-10-29 07:36:18 --> Helper loaded: url_helper
+INFO - 2017-10-29 07:36:18 --> Helper loaded: file_helper
+INFO - 2017-10-29 07:36:18 --> Database Driver Class Initialized
+INFO - 2017-10-29 07:36:18 --> Session: Class initialized using 'files' driver.
+INFO - 2017-10-29 07:36:18 --> Model Class Initialized
+INFO - 2017-10-29 07:36:18 --> Controller Class Initialized
+DEBUG - 2017-10-29 07:36:18 --> Session class already loaded. Second attempt ignored.
+INFO - 2017-10-29 07:36:18 --> File loaded: C:\wamp64\www\chips\application\views\user_profile.php
+INFO - 2017-10-29 07:36:18 --> Final output sent to browser
+DEBUG - 2017-10-29 07:36:18 --> Total execution time: 0.2554
+INFO - 2017-10-29 07:36:25 --> Config Class Initialized
+INFO - 2017-10-29 07:36:25 --> Hooks Class Initialized
+DEBUG - 2017-10-29 07:36:25 --> UTF-8 Support Enabled
+INFO - 2017-10-29 07:36:25 --> Utf8 Class Initialized
+INFO - 2017-10-29 07:36:25 --> URI Class Initialized
+INFO - 2017-10-29 07:36:25 --> Router Class Initialized
+INFO - 2017-10-29 07:36:25 --> Output Class Initialized
+INFO - 2017-10-29 07:36:25 --> Security Class Initialized
+DEBUG - 2017-10-29 07:36:25 --> Global POST, GET and COOKIE data sanitized
+INFO - 2017-10-29 07:36:25 --> Input Class Initialized
+INFO - 2017-10-29 07:36:25 --> Language Class Initialized
+INFO - 2017-10-29 07:36:25 --> Loader Class Initialized
+INFO - 2017-10-29 07:36:25 --> Helper loaded: url_helper
+INFO - 2017-10-29 07:36:25 --> Helper loaded: file_helper
+INFO - 2017-10-29 07:36:25 --> Database Driver Class Initialized
+INFO - 2017-10-29 07:36:25 --> Session: Class initialized using 'files' driver.
+INFO - 2017-10-29 07:36:25 --> Model Class Initialized
+INFO - 2017-10-29 07:36:25 --> Controller Class Initialized
+DEBUG - 2017-10-29 07:36:25 --> Session class already loaded. Second attempt ignored.
+INFO - 2017-10-29 07:36:25 --> Final output sent to browser
+DEBUG - 2017-10-29 07:36:25 --> Total execution time: 0.2642
+INFO - 2017-10-29 07:36:55 --> Config Class Initialized
+INFO - 2017-10-29 07:36:55 --> Hooks Class Initialized
+DEBUG - 2017-10-29 07:36:55 --> UTF-8 Support Enabled
+INFO - 2017-10-29 07:36:55 --> Utf8 Class Initialized
+INFO - 2017-10-29 07:36:55 --> URI Class Initialized
+INFO - 2017-10-29 07:36:55 --> Router Class Initialized
+INFO - 2017-10-29 07:36:55 --> Output Class Initialized
+INFO - 2017-10-29 07:36:55 --> Security Class Initialized
+DEBUG - 2017-10-29 07:36:55 --> Global POST, GET and COOKIE data sanitized
+INFO - 2017-10-29 07:36:55 --> Input Class Initialized
+INFO - 2017-10-29 07:36:55 --> Language Class Initialized
+INFO - 2017-10-29 07:36:55 --> Loader Class Initialized
+INFO - 2017-10-29 07:36:55 --> Helper loaded: url_helper
+INFO - 2017-10-29 07:36:55 --> Helper loaded: file_helper
+INFO - 2017-10-29 07:36:55 --> Database Driver Class Initialized
+INFO - 2017-10-29 07:36:55 --> Session: Class initialized using 'files' driver.
+INFO - 2017-10-29 07:36:55 --> Model Class Initialized
+INFO - 2017-10-29 07:36:55 --> Controller Class Initialized
+DEBUG - 2017-10-29 07:36:55 --> Session class already loaded. Second attempt ignored.
+INFO - 2017-10-29 07:36:55 --> File loaded: C:\wamp64\www\chips\application\views\welcome_message.php
+INFO - 2017-10-29 07:36:55 --> Final output sent to browser
+DEBUG - 2017-10-29 07:36:55 --> Total execution time: 0.2669
