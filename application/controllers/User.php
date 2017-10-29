@@ -13,7 +13,7 @@ public function __construct(){
 
 public function index()
 {
-$this->load->view("register.php");
+    $this->login_view();
 }
 
 public function register_user(){
@@ -45,9 +45,26 @@ else{
 }
 
 public function login_view(){
-
-$this->load->view("login.php");
-
+        $data= array();
+        $data=$this->Site_settings_model->admin_check($data);
+         switch ($data['is_admin'])
+            {
+                case 0:
+                    redirect('/Welcome', 'refresh');
+                break;
+                case 1:
+                    redirect('/Welcome', 'refresh');
+                break;
+                case 2:
+                    $this->load->view("login.php");
+                break;
+                case 3:
+                    redirect('/Welcome', 'refresh');
+                break;
+                default:
+                    $this->load->view("login.php");
+                exit(1); // EXIT_ERROR
+            }    
 }
 
 function login_user(){
@@ -88,7 +105,7 @@ $this->load->view('user_profile.php');
 public function user_logout(){
 
   $this->session->sess_destroy();
-  redirect('user/login_view', 'refresh');
+  redirect('user', 'refresh');
 }
 
 }

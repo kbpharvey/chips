@@ -6,7 +6,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * 
  * @extends CI_Controller
  */
-class Siteadmin extends CI_Controller {
+class Site_settings extends CI_Controller {
     
 
 function __construct()
@@ -15,9 +15,7 @@ function __construct()
 
  
 /* Standard Libraries */
-$this->load->database();
-$this->load->helper('url');
-$this->load->helper(array('url'));
+
 $copy = array();
 
 

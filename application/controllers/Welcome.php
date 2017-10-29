@@ -2,13 +2,11 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 class Welcome extends CI_Controller {
 public function __construct(){
-
         parent::__construct();
-  			$this->load->helper('url');
-  	 		$this->load->model('user_model');
         $this->load->library('session');
+        $data= array();
 
-}
+        }
 
 
 
@@ -30,21 +28,28 @@ public function __construct(){
 	 */
 	public function index()
 	{
-   
-            if (isset($_SESSION['user_email'])) 
+        $data= array();
+        $data=$this->Site_settings_model->admin_check($data);
+         switch ($data['is_admin'])
             {
-                $adm=$this->user_model->admin_check($_SESSION['user_email']);
-                if ($adm==1){
-                     $this->load->view('welcome_message');
-                }
-                else{
-                    echo "this is not admin";
-                }
-            }
-            else
-            {
-            echo "not logged in";
-            }
-
-        }
+                case 0:
+                    $this->load->view('welcome_message');
+                break;
+                case 1:
+                     $this->load->view('/logged_in/welcome_message');
+                break;
+                case 2:
+                    echo "not logged in";
+                         redirect('/user/login_view/', 'refresh');
+                break;
+                case 3:
+                echo "logged in but suspended";
+                break;
+                default:
+                    echo "not logged in";
+                         redirect('/user/login_view/', 'refresh');
+                    exit(1); // EXIT_ERROR
+            }    
+        }        
+            
 }

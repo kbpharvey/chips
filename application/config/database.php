@@ -121,7 +121,6 @@ $db['default'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );        case 'production':
-    echo "prod db";
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'sql206.byethost4.com',
