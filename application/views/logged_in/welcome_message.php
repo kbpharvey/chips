@@ -72,6 +72,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	<div id="body">
 		<p>THIS IS ONLY FOR ADMIN - Lucky You!!!</p>
+                <p><a href="<?php echo base_url('user/user_logout');?>" >  <button type="button" class="btn-primary">Logout</button></a></p>
 	</div>
 
 	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
