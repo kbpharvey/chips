@@ -53,7 +53,26 @@
  *
  * NOTE: If you change these, also change the error_reporting() code below
  */
-	define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
+//PHDEPLOY - fix following line when deploying
+//define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'production');
+//define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
+
+$env = $_SERVER['HTTP_HOST'];
+$envpos = strpos($env, 'localhost');
+if ($envpos !== false)
+        {
+//localhost
+//        define('ENVIRONMENT', 'production');
+        define('ENVIRONMENT', 'development');        
+        }
+	else
+        {
+//PRODUCTION
+        define('ENVIRONMENT', 'production');	
+        
+ //       echo "PROD";
+        }
+
 
 /*
  *---------------------------------------------------------------
@@ -66,13 +85,17 @@
 switch (ENVIRONMENT)
 {
 	case 'development':
-		error_reporting(-1);
+	echo "dev";
+            error_reporting(-1);
 		ini_set('display_errors', 1);
 	break;
 
 	case 'testing':
+            echo "testing";
 	case 'production':
-		ini_set('display_errors', 0);
+//PHDEPLOY - set back to 0
+//		ini_set('display_errors', 0);
+        	ini_set('display_errors', 1);
 		if (version_compare(PHP_VERSION, '5.3', '>='))
 		{
 			error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED & ~E_STRICT & ~E_USER_NOTICE & ~E_USER_DEPRECATED);
@@ -80,11 +103,15 @@ switch (ENVIRONMENT)
 		else
 		{
 			error_reporting(E_ALL & ~E_NOTICE & ~E_STRICT & ~E_USER_NOTICE);
-		}
+//PHDEPLOY - remove following line when deploying
+                        error_reporting(E_ALL);
+			
+                        }
 	break;
 
 	default:
-		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
+	echo "default";
+            header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
 		echo 'The application environment is not set correctly.';
 		exit(1); // EXIT_ERROR
 }

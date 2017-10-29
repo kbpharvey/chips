@@ -25,11 +25,10 @@ public function register_user(){
       'user_age'=>$this->input->post('user_age'),
       'user_mobile'=>$this->input->post('user_mobile')
         );
-        print_r($user);
 
-$email_check=$this->user_model->email_check($user['user_email']);
+      $email_check=$this->user_model->email_check($user['user_email']);
 
-if($email_check){
+      if($email_check){
   $this->user_model->register_user($user);
   $this->session->set_flashdata('success_msg', 'Registered successfully.Now login to your account.');
   redirect('user/login_view');
@@ -60,6 +59,7 @@ function login_user(){
     );
 
     $data=$this->user_model->login_user($user_login['user_email'],$user_login['user_password']);
+    
       if($data)
       {
         $this->session->set_userdata('user_id',$data['user_id']);
@@ -68,7 +68,7 @@ function login_user(){
         $this->session->set_userdata('user_age',$data['user_age']);
         $this->session->set_userdata('user_mobile',$data['user_mobile']);
 
-        $this->load->view('user_profile.php');
+$this->load->view('user_profile.php');
 
       }
       else{

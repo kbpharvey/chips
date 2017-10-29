@@ -23,7 +23,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost:8080/chips/';
+switch (ENVIRONMENT)
+{
+	case 'development':
+            $config['base_url']	= 'http://localhost:8080/chips/';
+	break;
+
+	case 'testing':
+            $config['base_url']	= 'http://localhost:8080/chips/';
+        case 'production':
+//            $config['base_url']	= 'http://chips.totalh.net/';
+              $config['base_url']	= 'http://chips.byethost4.com/';
+        break;
+
+	default:
+            $config['base_url']	= 'http://localhost:8080/chips/';
+        exit(1); // EXIT_ERROR
+}
+//echo "base URL: ".$config['base_url'];
 
 /*
 |--------------------------------------------------------------------------
@@ -223,7 +240,8 @@ $config['allow_get_array'] = TRUE;
 | your log files will fill up very fast.
 |
 */
-$config['log_threshold'] = 0;
+//PHDEPLOY - set this back to 0
+$config['log_threshold'] = 4;
 
 /*
 |--------------------------------------------------------------------------
@@ -380,7 +398,7 @@ $config['encryption_key'] = '';
 $config['sess_driver'] = 'files';
 $config['sess_cookie_name'] = 'ci_session';
 $config['sess_expiration'] = 7200;
-$config['sess_save_path'] = NULL;
+$config['sess_save_path'] = BASEPATH.'/tmp/';
 $config['sess_match_ip'] = FALSE;
 $config['sess_time_to_update'] = 300;
 $config['sess_regenerate_destroy'] = FALSE;

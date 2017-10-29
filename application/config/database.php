@@ -73,6 +73,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $active_group = 'default';
 $query_builder = TRUE;
 
+switch (ENVIRONMENT)
+{
+	case 'development':
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
@@ -94,3 +97,103 @@ $db['default'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );
+	break;
+
+	case 'testing':
+$db['default'] = array(
+	'dsn'	=> '',
+	'hostname' => 'localhost',
+	'username' => 'b4_20897096',
+	'password' => 'Bwalt3l!ast',
+	'database' => 'ci-login-registration',
+	'dbdriver' => 'mysqli',
+	'dbprefix' => '',
+	'pconnect' => FALSE,
+	'db_debug' => (ENVIRONMENT !== 'production'),
+	'cache_on' => FALSE,
+	'cachedir' => '',
+	'char_set' => 'utf8',
+	'dbcollat' => 'utf8_general_ci',
+	'swap_pre' => '',
+	'encrypt' => FALSE,
+	'compress' => FALSE,
+	'stricton' => FALSE,
+	'failover' => array(),
+	'save_queries' => TRUE
+);        case 'production':
+    echo "prod db";
+$db['default'] = array(
+	'dsn'	=> '',
+	'hostname' => 'sql206.byethost4.com',
+	'username' => 'b4_20897096',
+	'password' => 'Bwalt3l!ast',
+	'database' => 'b4_20897096_chips',
+	'dbdriver' => 'mysqli',
+	'dbprefix' => '',
+	'pconnect' => FALSE,
+	'db_debug' => (ENVIRONMENT !== 'production'),
+	'cache_on' => FALSE,
+	'cachedir' => '',
+	'char_set' => 'utf8',
+	'dbcollat' => 'utf8_general_ci',
+	'swap_pre' => '',
+	'encrypt' => FALSE,
+	'compress' => FALSE,
+	'stricton' => FALSE,
+	'failover' => array(),
+	'save_queries' => TRUE
+);
+
+
+//DEBUG TO CHECK PROD DB
+//echo '<pre>';
+//  print_r($db['default']);
+//  echo '</pre>';
+//
+//  echo 'Connecting to database: ' .$db['default']['database'];
+// // $db['default']['hostname'] = ':/tmp/mysql/mysql.sock';
+//  $dbh=mysql_connect
+//  (
+//    $db['default']['hostname'],
+//    $db['default']['username'],
+//    $db['default']['password'])
+//    or die('Cannot connect to the database because: ' . mysql_error());
+//    mysql_select_db ($db['default']['database']);
+//
+//    echo '<br />   Connected OK:'  ;
+//    die( 'file: ' .__FILE__ . ' Line: ' .__LINE__); 
+//
+//
+
+
+
+
+
+break;
+	default:
+$db['default'] = array(
+	'dsn'	=> '',
+	'hostname' => 'sql206.byethost4.com',
+	'username' => 'b4_20897096',
+	'password' => 'Bwalt3l!ast',
+	'database' => 'b4_20897096_chips',
+	'dbdriver' => 'mysqli',
+	'dbprefix' => '',
+	'pconnect' => FALSE,
+	'db_debug' => (ENVIRONMENT !== 'production'),
+	'cache_on' => FALSE,
+	'cachedir' => '',
+	'char_set' => 'utf8',
+	'dbcollat' => 'utf8_general_ci',
+	'swap_pre' => '',
+	'encrypt' => FALSE,
+	'compress' => FALSE,
+	'stricton' => FALSE,
+	'failover' => array(),
+	'save_queries' => TRUE
+);        exit(1); // EXIT_ERROR
+}
+
+
+
+

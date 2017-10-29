@@ -5,9 +5,7 @@ class User_model extends CI_model{
 
 public function register_user($user){
 
-
 $this->db->insert('user', $user);
-
 }
 
 public function login_user($email,$pass){
@@ -28,7 +26,6 @@ public function login_user($email,$pass){
 
 }
 public function email_check($email){
-
   $this->db->select('*');
   $this->db->from('user');
   $this->db->where('user_email',$email);
@@ -37,10 +34,29 @@ public function email_check($email){
   if($query->num_rows()>0){
     return false;
   }else{
-    return true;
+      
+      return true;
   }
 
 }
+
+public function admin_check($email){
+    $this->db->select('*');
+    $this->db->from('user');
+    $this->db->where('user_email',$email);
+    $this->db->where('is_admin',1);
+    $query=$this->db->get();
+
+    if($query->num_rows()>0){
+      return 1;
+    }else{
+        return 0;
+    }
+
+   }
+
+
+
 
 
 }
